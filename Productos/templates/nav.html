@@ -1,0 +1,88 @@
+{% load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Vilanova'Shop</title>
+        <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'assets/css/Font%20Awesome%205%20Brands.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Font%20Awesome%205%20Free.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navbar-With-Button-icons.css' %}">
+</head>
+
+<body>
+    <div class="bg-white modal fade" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <form class="border-0 modal-content modal-body p-0" action="" method="get">
+            <div class="input-group mb-2"><input class="form-control form-control" type="text" id="inputModalSearch" name="q" placeholder="Search ..."><button type="submit" class="input-group-text bg-success text-light"><i class="fa fa-search text-white fa-fw"></i></button></div>
+        </form>
+    </div>
+</div>
+<div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators"></ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background: #ffffff;margin-bottom: -172px;">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="col-md-8 col-lg-6 offset-xxl-1 mx-auto order-lg-last"><img class="img-fluid" src="{% static 'assets/img/logo-02.png' %}" alt="" style="padding-bottom: 0px;margin-bottom: 116px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="container py-5" style="margin-top: 148px;">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 col-xl-6 offset-xl-10 m-auto" style="padding-left: 0px;margin-left: 283px;margin-bottom: -22px;padding-right: 0px;">
+            <h1 class="fs-1 h1" style="margin-top: -186px;font-size: 30px;">Servicio a domicilio incluido al realizar cada compra</h1>
+            <nav class="navbar navbar-light navbar-expand-md py-3">
+                <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse justify-content-center align-items-center align-content-center" id="navcol-1" style="padding-right: 0px;padding-left: 0px;margin-left: 90px;">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"></li>
+                            <li class="nav-item"><a class="nav-link justify-content-center" href="{% url 'product_list' %}">Todos los Productos</a></li>
+                            <li class="nav-item justify-content-center"><a class="nav-link justify-content-center" href="{% url 'personalized_product_list' %}">Productos Personalizados</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>
+<section class="bg-light"></section>
+<article style="margin-left: -33px;padding-right: 40px;"></article>
+    <section class="bg-light"></section>
+    <article style="margin-left: -33px;padding-right: 40px;"></article>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/clean-blog.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/templatemo.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    
+
+    
+
+    {% block content %} {% endblock %}
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; {{ year }} Vilanova'Shop | Crafted by Albert_Jarett</p>
+    </footer>
+</body>
+
+</html>
