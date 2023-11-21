@@ -1,0 +1,52 @@
+ {% extends "nav.html" %}
+
+
+ {% block content %}
+ <section class="container py-5">
+     <div class="row text-center pt-3">
+         {% for product in personalized_products %}
+             <div class="col-md-3 mb-4">
+                 <div class="card">
+                     <img src="{{ product.image.url }}" class="card-img-top product-image" alt="{{ product.title }}">
+                     <div class="card-body">
+                         <h5 class="card-title">{{ product.title }}</h5>
+                         <p class="card-text">Precio: ${{ product.price }}</p>
+                         <a href="#" class="btn btn-primary buy-button"
+                            data-product-name="{{ product.title }}"
+                            data-product-price="{{ product.price }}"
+                            data-product-image="{{ product.image.url }}">Comprar</a>
+                     </div>
+                 </div>
+             </div>
+         {% endfor %}
+     </div>
+ </section>
+ 
+ <script>
+     // Agrega un evento de clic para cada botón de compra
+     document.querySelectorAll('.buy-button').forEach(button => {
+         button.addEventListener('click', function(event) {
+             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+ 
+             // Número de teléfono al que enviar el mensaje
+             const phoneNumber = "+5355089270";
+ 
+             // Nombre, precio y URL de la imagen del producto
+             const productName = this.getAttribute('data-product-name');
+             const productPrice = this.getAttribute('data-product-price');
+             const productImage = this.getAttribute('data-product-image');
+ 
+             // Construye el mensaje de WhatsApp
+             const message = `Hola, vengo desde Vilanova'Shop y deseo comprar este producto personalizado: ${productName}. El precio es ${productPrice}. Imagen: ${productImage}`;
+ 
+             // Construye el enlace de WhatsApp con el número de teléfono y el mensaje
+             const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+ 
+             // Abre una nueva ventana o pestaña con el enlace de WhatsApp
+             window.open(whatsappLink, '_blank');
+         });
+     });
+ </script>
+ 
+ {% endblock %}
+ 
